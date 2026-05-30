@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\client",
+    "\\src\\client\\java\\com",
+    "\\src\\client\\java\\com\\example",
+    "\\src\\client\\java\\com\\example\\client",
+    "\\src\\main",
+    "\\src\\main\\java",
+    "\\src\\main\\java\\com",
+    "\\src\\main\\java\\com\\ai"
+  ],
+  "SelectedNode": "\\src\\main\\java\\com\\ai\\OllamaClient.java",
+  "PreviewInSolutionExplorer": false
+}

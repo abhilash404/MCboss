@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import com.example.ai.OllamaClient;
 
 public class ExampleMod implements ModInitializer {
 	public static final String MOD_ID = "modid";
@@ -15,10 +16,12 @@ public class ExampleMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+		LOGGER.info("AI Boss Mod loading...");
 
-		LOGGER.info("Hello Fabric world!");
+		OllamaClient client = new OllamaClient();
+		client.ask("Reply with only this JSON and nothing else: {\"action\": \"test\"}")
+				.thenAccept(response -> {
+					LOGGER.info("Ollama response: " + response);
+				});
 	}
 }
